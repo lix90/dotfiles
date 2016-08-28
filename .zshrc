@@ -91,8 +91,12 @@ export MATLAB_EXECUTABLE=/Applications/MATLAB_R2012b.app/bin/matlab
 
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
 alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs -nw
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 
 #rvm
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
