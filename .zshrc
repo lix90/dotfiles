@@ -8,7 +8,7 @@ export ZSH=/Users/lix/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -49,23 +49,21 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git, osx)
 
 # User configuration
 
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#     export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#     export EDITOR='mvim'
 # fi
 
 # Compilation flags
@@ -82,21 +80,23 @@ export LANG=en_US.UTF-8
 # Example aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # add anaconda2
 # added by Anaconda2 4.0.0 installer
-export PATH="/Users/lix/anaconda2/bin:$PATH"
-export PATH="/Applications/MATLAB_R2012b.app/bin:$PATH"
-export MATLAB_EXECUTABLE=/Applications/MATLAB_R2012b.app/bin/matlab
-
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
-alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs -nw
-
+export PATH=/Users/lix/anaconda2/bin:$PATH
+# export PATH=/Applications/MATLAB_R2012b.app/bin:$PATH
+# export MATLAB_EXECUTABLE=/Applications/MATLAB_R2012b.app/bin/matlab
+export MATLAB_EXECUTABLE=/opt/local/bin/matlab
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
-
-#rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export MANPATH=/usr/local/man:$MANPATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
+
+#rvm
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
