@@ -16,8 +16,11 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Ho
 export PATH="/usr/local/Cellar/protobuf/2.6.1/bin:$PATH"
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/protobuf/2.6.1/lib"
 ##---------------------------------------------
-
+# matlab
 export MATLAB_EXECUTABLE=/opt/local/bin/matlab
+# export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre"
+# export MATLAB_JAVA="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+alias matlab="matlab -nojvm"
 
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
@@ -25,4 +28,5 @@ export MANPATH=/usr/local/man:$MANPATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-
+## MySQL
+export PATH=$PATH:/usr/local/mysql/bin
