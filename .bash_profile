@@ -22,8 +22,7 @@ export MATLAB_EXECUTABLE=/opt/local/bin/matlab
 # export MATLAB_JAVA="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 alias matlab="matlab -nojvm"
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

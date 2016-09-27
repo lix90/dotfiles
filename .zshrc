@@ -1,3 +1,8 @@
+#rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lix/.oh-my-zsh
 
@@ -82,23 +87,23 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+export MANPATH=/usr/local/man:$MANPATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 # add anaconda2
 # added by Anaconda2 4.0.0 installer
-export PATH=/Users/lix/anaconda2/bin:$PATH
+export PATH=$PATH:/Users/lix/anaconda2/bin
 # export PATH=/Applications/MATLAB_R2012b.app/bin:$PATH
 # export MATLAB_EXECUTABLE=/Applications/MATLAB_R2012b.app/bin/matlab
 export MATLAB_EXECUTABLE=/opt/local/bin/matlab
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:$PATH
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
 
-#rvm
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # for deploy hexo blog
 alias hexodeploy="hexo clean && hexo generate && hexo deploy"
@@ -114,3 +119,8 @@ alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
 export PATH="/usr/local/Cellar/protobuf/2.6.1/bin:$PATH"
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/protobuf/2.6.1/lib"
+
+# php
+export PATH=$PATH:/Users/lix/.composer/vendor/bin
+
+
