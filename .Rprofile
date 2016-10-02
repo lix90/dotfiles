@@ -3,7 +3,7 @@ message('Hi Lix, welcome to R!')
 
                                         # Customise the R prompt that prefixes every command 
                                         # (use " " for a blank prompt) 
-options(prompt = "lixR> ") 
+options(prompt = "R> ") 
 
 ## # Don!t convert text strings to factors with base read functions 
 ## # options(stringsAsFactors = FALSE)
