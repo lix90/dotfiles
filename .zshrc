@@ -123,4 +123,4 @@ export DYLD_LIBRARY_PATH="/usr/local/Cellar/protobuf/2.6.1/lib"
 # php
 export PATH=$PATH:/Users/lix/.composer/vendor/bin
 
-
+export TERM=xterm-256color

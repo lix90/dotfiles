@@ -1,7 +1,5 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-# added by Anaconda2 4.0.0 installer
-export PATH="/Users/lix/anaconda2/bin:$PATH"
 # export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 # for deploy hexo blog
@@ -28,4 +26,15 @@ export MANPATH=/usr/local/man:$MANPATH
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ## MySQL
-export PATH=$PATH:/usr/local/mysql/bin
+export PATH="$PATH:/usr/local/mysql/bin"
+# added by Anaconda2 4.0.0 installer
+export PATH="/Users/lix/anaconda2/bin:$PATH"
+## youdao dictionary
+alias yd="~/app/ydcv/ydcv.py"
+## bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then source $(brew --prefix)/etc/bash_completion; fi
+
+## read bashrc
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
