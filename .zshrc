@@ -2,7 +2,6 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lix/.oh-my-zsh
 
@@ -10,38 +9,14 @@ export ZSH=/Users/lix/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="amuse"
+ZSH_THEME="suvash"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
+export UPDATE_ZSH_DAYS=13
+COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -57,8 +32,6 @@ CASE_SENSITIVE="true"
 plugins=(git, osx)
 
 # User configuration
-
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -87,40 +60,45 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
-export MANPATH=/usr/local/man:$MANPATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# add anaconda2
-# added by Anaconda2 4.0.0 installer
-export PATH=$PATH:/Users/lix/anaconda2/bin
-# export PATH=/Applications/MATLAB_R2012b.app/bin:$PATH
-# export MATLAB_EXECUTABLE=/Applications/MATLAB_R2012b.app/bin/matlab
-export MATLAB_EXECUTABLE=/opt/local/bin/matlab
-export MANPATH=/usr/local/man:$MANPATH
+# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
-
-
-# for deploy hexo blog
-alias hexodeploy="hexo clean && hexo generate && hexo deploy"
-alias hexoserver="hexo clean && hexo generate && hexo server"
-
-## MySQL
-export PATH=$PATH:/usr/local/mysql/bin
-
-## for hadoop
-alias hstart="/usr/local/Cellar/hadoop/2.7.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/stop-dfs.sh"
 # java home
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
 export PATH="/usr/local/Cellar/protobuf/2.6.1/bin:$PATH"
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/protobuf/2.6.1/lib"
-
+# matlab
+export MATLAB_EXECUTABLE="/opt/local/bin/matlab"
+# export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre"
+# export MATLAB_JAVA="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export MANPATH=/usr/local/man:$MANPATH
+## MySQL
+export PATH="$PATH:/usr/local/mysql/bin"
+# added by Anaconda2 4.0.0 installer
+export PATH="/Users/lix/anaconda2/bin:$PATH"
 # php
 export PATH=$PATH:/Users/lix/.composer/vendor/bin
-
 export TERM=xterm-256color
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+## bash_completion
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then source $(brew --prefix)/etc/bash_completion; fi
+## read bashrc
+# if [ -f ~/.bashrc ]; then source ~/.bashrc; Fi
+
+## alias
+# alias ls='ls --color'
+alias m='tldr'
+alias ll='ls -lht'
+alias therm='rm'
+alias rm='trash'
+alias ytdl="youtube-dl"
+alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias hxd="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo deploy"
+alias hxs="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo server"
+alias hstart="/usr/local/Cellar/hadoop/2.7.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/start-yarn.sh"
+alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/stop-dfs.sh"
+alias yd="~/app/ydcv/ydcv.py"
+alias mat="matlab -nojvm"
