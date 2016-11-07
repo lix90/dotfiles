@@ -56,11 +56,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias zshconfig="em ~/.zshrc"
+alias ohmyzsh="em ~/.oh-my-zsh"
 
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -83,8 +81,6 @@ export PATH=$PATH:/Users/lix/.composer/vendor/bin
 export TERM=xterm-256color
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-## bash_completion
-# if [ -f $(brew --prefix)/etc/bash_completion ]; then source $(brew --prefix)/etc/bash_completion; fi
 ## read bashrc
 # if [ -f ~/.bashrc ]; then source ~/.bashrc; Fi
 
@@ -95,10 +91,14 @@ alias ll='ls -lht'
 alias therm='rm'
 alias rm='trash'
 alias ytdl="youtube-dl"
-alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw -q --no-splash"
 alias hxd="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo deploy"
 alias hxs="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo server"
 alias hstart="/usr/local/Cellar/hadoop/2.7.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/start-yarn.sh"
 alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/stop-dfs.sh"
 alias yd="~/app/ydcv/ydcv.py"
 alias mat="matlab -nojvm"
+alias fq="/usr/local/Cellar/proxychains-ng/bin/proxychains4"
+alias clc="clear"
+
+gg() { open -a "Google Chrome" "http://www.google.com/search?q=$1"; 
