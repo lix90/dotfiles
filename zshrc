@@ -75,7 +75,7 @@ export MANPATH=/usr/local/man:$MANPATH
 ## MySQL
 export PATH="$PATH:/usr/local/mysql/bin"
 # added by Anaconda2 4.0.0 installer
-export PATH="/Users/lix/anaconda2/bin:$PATH"
+# export PATH="/Users/lix/anaconda2/bin:$PATH"
 # php
 export PATH=$PATH:/Users/lix/.composer/vendor/bin
 export TERM=xterm-256color
@@ -92,13 +92,15 @@ alias therm='rm'
 alias rm='trash'
 alias ytdl="youtube-dl"
 alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw -q --no-splash"
-alias hxd="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo deploy"
-alias hxs="cd ~/github/hexo-blog/ && hexo clean && hexo generate && hexo server"
+alias hxd="cd ~/github/hexo-blog/ && hexo generate && hexo deploy"
+alias hxs="cd ~/github/hexo-blog/ && hexo generate && hexo server"
 alias hstart="/usr/local/Cellar/hadoop/2.7.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/start-yarn.sh"
 alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/stop-dfs.sh"
 alias yd="~/app/ydcv/ydcv.py"
 alias mat="matlab -nojvm"
-alias fq="/usr/local/Cellar/proxychains-ng/bin/proxychains4"
+alias fq="/usr/local/Cellar/proxychains-ng/4.11/bin/proxychains4"
 alias clc="clear"
+gg() { open -a "Google Chrome" "https://www.google.com/search?q=$1";}
 
-gg() { open -a "Google Chrome" "http://www.google.com/search?q=$1"; 
+# added by travis gem
+[ -f /Users/lix/.travis/travis.sh ] && source /Users/lix/.travis/travis.sh
