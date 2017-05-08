@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"Alignment",
+		"AlignTab",
+		"DocBlockr",
+		"EditorConfig",
+		"Emacs Pro Essentials",
+		"Emmet",
+		"HTML-CSS-JS Prettify",
+		"HTML5",
+		"jQuery",
+		"JSHint Gutter",
+		"MarkdownEditing",
+		"Material Theme",
+		"Nodejs",
+		"Package Control",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Theme - Monokai",
+		"Theme - Soda",
+		"Theme - SodaSeti",
+		"Vue Syntax Highlight",
+		"Vuejs Complete Package"
+	]
+}
