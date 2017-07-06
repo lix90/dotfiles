@@ -1,93 +1,26 @@
-# System wide environment and startup programs, for login setup
-# Functions and aliases go in /etc/bashrc
-function addpath () {
-    if [ -e $1 ]; then
-        if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
-            if [ "$2" = "after" ] ; then
-                PATH=$PATH:$1
-            else
-                PATH=$1:$PATH
-            fi
-        fi
-    fi
-}
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
 
 
-addpath "~/dotfiles/usrbin/"
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
 
-# java home
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
-#export DYLD_LIBRARY_PATH="/usr/local/Cellar/protobuf/2.6.1/lib"
-#addpath /usr/local/Cellar/protobuf/2.6.1/bin after
+# Put your fun stuff here.
 
-## matlab
-# export MATLAB_EXECUTABLE="/Applications/MATLAB_R2014b.app/bin/matlab"
-# export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre"
-# export MATLAB_JAVA="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
-# export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-#export MANPATH=/usr/local/man:$MANPATH
+source "$HOME/dotfiles/vars"
+source "$HOME/dotfiles/aliases"
+source virtualenvwrapper.sh
+source "$HOME/.autoenv/activate.sh"
 
-## MySQL
-#addpath /usr/local/mysql/bin after
-
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
-
-# #---------------------------------- nvm -------------------------------------
-# export NVM_DIR="/Users/lix/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-## bash_completion
-# if [ -f $(brew --prefix)/etc/bash_completion ]; then source $(brew --prefix)/etc/bash_completion; fi
-
-## alias
-alias m='tldr'
-alias ll='ls -lht'
-alias therm='rm'
-alias rm='gvfs-trash'
-alias ytdl="youtube-dl"
-alias em="emacs -nw -q --no-splash"
-alias emdebug="emacs --debug-init"
-#alias hxd="cd $HOME/github/hexo-blog/ && hexo generate && hexo deploy"
-#alias hxs="cd $HOME/github/hexo-blog/ && hexo generate && hexo server"
-#alias hstart="/usr/local/Cellar/hadoop/2.7.2/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/start-yarn.sh"
-#alias hstop="/usr/local/Cellar/hadoop/2.7.2/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.2/sbin/stop-dfs.sh"
-alias yd="~/app/ydcv/ydcv.py"
-#alias fq="/usr/local/Cellar/proxychains-ng/4.12_1/bin/proxychains4"
-#alias clc="clear"
-#alias sumatl="sudo /Applications/MATLAB_R2014b.app/bin/matlab -nosplash"
-#alias matl="/Applications/MATLAB_R2014b.app/bin/matlab -nosplash"
-#alias matlsh="/Applications/MATLAB_R2014b.app/bin/matlab -nojvm -nosplash"
-
-# stardict
-alias d-web="sdcv -c --use-dict=\"Random House Webster's Unabridged Dictionary \(En-En\)\" "
-alias d-oxf="sdcv -c --use-dict=\"牛津简明英汉袖珍辞典\" "
-alias d-oxfc="sdcv -c --use-dict=\"Oxford Collocations Dictionary 2nd Ed. \(En-En\)\" "
-alias d-wn="sdcv -c --use-dict=\"WordNet® 3.0 (En-En)\" "
-alias d-webth="sdcv -c --use-dict=\"Merriam-Webster's Collegiate Thesaurus \(En-En\)\" "
-alias d-21="sdcv -c --use-dict=\"21世纪英汉汉英双向词典\" "
-alias d-am="sdcv -c --use-dict=\"American Heritage Dictionary 4th Ed. \(En-En\)\" "
-
-# jupyter
-alias ipynb="jupyter notebook --no-browser"
-alias ipy="jupyter notebook"
-alias runpy2="source activate python2"
-
-function endpy2 {
-    ver="$(python --version 2>&1 | sed 's/Python \([0-9]\).\([0-9]\).*/\1\2/')"
-    if [ "$ver" -lt "35" ]; then
-        source deactivate
-        printf 'End Python27 and activate Python35\n'
-    fi
-}
-
-alias runpy3="endpy2"
-
-# Git
-alias gcn="git clone --depth=1"
-
-# added by Anaconda2 4.0.0 installer
-addpath "$HOME/anaconda3/bin"
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
