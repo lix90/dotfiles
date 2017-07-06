@@ -1,0 +1,132 @@
+{
+  "configs": [
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "香港直连线路",
+      "server": "smart-azure-hk.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "HK2",
+      "server": "hk-op.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "HK3",
+      "server": "hk-meo.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "HK4",
+      "server": "hk-pccw.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "HKB",
+      "server": "hk-aliyb.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "HKB-2",
+      "server": "hkb2.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "日本2",
+      "server": "jp-kddi.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "日本3",
+      "server": "jp-iij.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "日本5",
+      "server": "jp-ntt.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "新加坡1",
+      "server": "sg-1.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "新加坡3",
+      "server": "sg-pccw.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "美国C3",
+      "server": "c3-cn2.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "美国QN",
+      "server": "us-qn.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "美国1",
+      "server": "us-vp.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "美国2",
+      "server": "us-bvm.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "台湾",
+      "server": "tw-hinet.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "罗马尼亚",
+      "server": "romania.muj.host",
+      "server_port": 3916
+    },
+    {
+      "method": "aes-256-cfb",
+      "password": "lix900311!",
+      "remarks": "印尼",
+      "server": "ina.muj.host",
+      "server_port": 3916
+    }
+  ],
+  "localPort": 1080,
+  "shareOverLan": false
+}

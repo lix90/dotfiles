@@ -1,0 +1,26 @@
+for ttyi in 1 2 3 4 5 6
+do
+    if [ "$(tty)" = "/dev/tty$ttyi" ]; then
+        export LC_ALL="en_US.UTF-8"
+        export LANGUAGE="en_US.UTF-8"
+        export LANG="en_US.UTF-8"
+    fi
+done
+export LANG="en_US.UTF-8"
+export XMODIFIERS="@im=fcitx"
+export XIM=fcitx
+export XIM_PROGRAM=fcitx
+export QT_IM_MODULE=fcitx
+export QTK_TM_MODULE=fcitx
+
+export PATH="/sbin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
+
+export ML_PATH="$HOME/ml"
+export WORKON_HOME="$HOME/Envs"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node

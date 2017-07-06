@@ -1,0 +1,41 @@
+##----------------------------alias-------------------------------
+## network
+alias ss-start="nohup ss-local -c $HOME/dotfiles/ss/config1.json &"
+alias fq="proxychains -f $HOME/dotfiles/proxychains.conf"
+alias dl="axel"
+alias dlyt="youtube-dl --config-location $HOME/dotfiles/youtube-dl-linux"
+## emacs
+alias e="emacs -nw -Q"
+alias em="emacs -nw"
+chmod +x $HOME/dotfiles/usrbin/emcli.sh
+alias emcli="$HOME/dotfiles/usrbin/emcli.sh"
+## trash
+alias trash-rm="gvfs-trash"
+alias trash-ls="gvfs-ls --trash://"
+alias trash-empty="gvfs-trash --empty"
+## file system
+alias mntntfs="sudo mount -t ntfs-3g"
+alias mnt="sudo mount"
+alias umnt="sudo umount"
+alias clean-portage-dist-tmp="sudo rm -rf /usr/portage/distfiles/* && sudo rm -rf /var/tmp/portage/*"
+alias clean-portage-dist="sudo rm -rf /usr/portage/distfiles/*"
+alias clean-portage-tmp="sudo rm -rf /var/tmp/portage/*"
+alias du="du -h --max-depth=1"
+alias df="df -h"
+# emerge
+alias eix-instl="sudo emerge -avt"
+alias eix-instl-fq="fq sudo emerge -avt"
+alias eix-uninstl="sudo emerge -C"
+# utilities
+alias m="tldr"
+# source zsh, bash
+alias srz="source $HOME/.zshrc"
+alias srb="source $HOME/.bashrc"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd $HOME"
+# git
+alias git-clone-lastest="git clone --depth=1"
+alias git-clone-lastest-fq="fq git clone --depth=1"
+# tools
