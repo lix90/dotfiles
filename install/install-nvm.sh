@@ -9,7 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 if [[ ! -d $NVM_DIR ]]; then
     mkdir -p $NVM_DIR
 fi
-if test ! "$(which nvm)"; then
+if ! [ -x "$(command -v nvm)" ]; then
     echo "Installing nvm...."
     curl -o- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
     echo "...done!"
