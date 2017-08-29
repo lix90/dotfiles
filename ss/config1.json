@@ -1,10 +1,11 @@
 {
-    "server": "hk-op.muj.host",
-    "server_port": 3916,
-    "local_address": "127.0.0.1",
-    "local_port": 1080,
-    "password": "lix900311!",
-    "timeout": 300,
-    "method": "aes-256-cfb",
-    "remarks": "HK2"
+  "server": "hk-pccw.muj.host",
+  "server_port": 3971,
+  "local_address": "127.0.0.1",
+  "shareOverLan": false,
+  "local_port": 1080,
+  "password": "lix900311!",
+  "timeout": 300,
+  "method": "aes-256-cfb",
+  "remarks": "香港"
 }
